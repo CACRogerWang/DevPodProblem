@@ -1,0 +1,12 @@
+use_frameworks!
+
+target 'DevPodProblem_Example' do
+  pod 'DevPodProblem', :path => '../'
+
+  target 'DevPodProblem_Tests' do
+    inherit! :search_paths
+
+    pod 'Specta'
+  pod 'Expecta'
+  end
+end
