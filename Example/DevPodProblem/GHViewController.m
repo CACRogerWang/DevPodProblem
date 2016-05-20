@@ -7,13 +7,13 @@
 //
 
 #import "GHViewController.h"
-//@import DevPodProblem;
+#import <DevPodProblem/MyPublicClass.h>
 
 @interface GHViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *field1;
 @property (weak, nonatomic) IBOutlet UILabel *field2;
 
-//@property (nonatomic, strong) MyPublicClass *publicClass;
+@property (nonatomic, strong) MyPublicClass *publicClass;
 
 @end
 
@@ -23,11 +23,11 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-//	self.publicClass = [[MyPublicClass alloc] init];
-//	self.publicClass.testString = @"I come from Public!\n";
-//	self.field1.text = [self.publicClass doubleTestString];
-//	self.publicClass.testString = @"I from Private!\n";
-//	self.field2.text = [self.publicClass usePrivateClass];
+	self.publicClass = [[MyPublicClass alloc] init];
+	self.publicClass.testString = @"I come from Public!\n";
+	self.field1.text = [self.publicClass doubleTestString];
+	self.publicClass.testString = @"I from Private!\n";
+	self.field2.text = [self.publicClass usePrivateClass];
 }
 
 - (void)didReceiveMemoryWarning
